@@ -77,3 +77,26 @@
 -- 'Hello life lessons 2',
 -- '101'
 -- )
+-- CREATE TABLE tags (
+  -- id SERIAL PRIMARY KEY,
+  -- name text NOT NULL
+-- )
+-- CREATE TABLE notes_tags (
+--   note_id INTEGER NOT NULL REFERENCES notes ON DELETE CASCADE,
+--   tag_id INTEGER NOT NULL REFERENCES tags ON DELETE CASCADE
+-- )
+
+-- INSERT INTO tags (name) VALUES 
+--   ('novel'),
+--   ('article'),
+--   ('scifi');
+
+-- INSERT INTO notes_tags (note_id, tag_id) VALUES 
+-- ('2', '1'),
+-- ('4', '2'),
+-- ('5', '3');
+
+-- SELECT title, tags.name, folders.name FROM notes
+-- LEFT JOIN folders ON notes.folder_id = folders.id
+-- LEFT JOIN notes_tags ON notes.id = notes_tags.note_id
+-- LEFT JOIN tags ON notes_tags.tag_id = tags.id;
